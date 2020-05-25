@@ -1,0 +1,204 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Storm Mobility</title>
+<link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon"> 
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+<script type="text/javascript">
+</script>
+
+<style>
+</style>
+</head>
+
+
+<body>
+<div id="header" style="display:none"></div>
+Changes to apply to Edgar's export: 
+
+1. Reduce the decimal places to 2. Document the effect.
+
+-84.5129771,48.0062258222 becomes -84.51,48.01
+
+2. Omit the filename from the first column. Doing so will reduce the size. (The year, storm and city would be the ultimate key, but it's not necessary if the file name contains these.)
+
+3. Use the following file name format:
+
+2016-jackson-matthew.csv
+
+
+MIT's Cebrian
+https://www.media.mit.edu/people/cebrian/overview/
+
+Roy, Cebrain, 
+https://link.springer.com/article/10.1140/epjds/s13688-019-0196-6#Sec2
+
+"Locations of each user are extracted in six-hour interval for each day." 
+- Is the last location in a previous interval used for the next?
+
+"User must have at least two locations within a six-hour interval"
+
+"Displacement between two consecutive points will be calculated for each user at every six-hour interval."
+- What if the user has more than two points in the interval? 
+A: "If a user has more than two observations at a given period, we calculate all the displacements between the consecutive points." Q: But if points are consecutive, how can there be displacements between them?
+
+
+Could be my study:
+Quantifying shared mobility resilience to extreme events using real-time vehicle location APIs
+
+Calculate the "level of human mobility" on shared vehicles in response to:
+Storms, City Events, Road Closures, E
+
+
+Take-aways from the Roy 2019 study
+
+We should provide Sandy data in our new study.
+We should fix Wipha and include other storms
+
+Include discussion of why 2-step radius of gyration is valid: Allows daily commutes to be included.  (Few people would tweet multiple times before leaving home)
+
+
+1. Why does the Typhoon Wipha csv (01_Whipha.csv) contain 309,204 rows with a 0 for the anonymized userID?
+
+User ID 1 is skipped. Where the skip occurs, data appears to be missing because the fist user 2 row is missing the longitude and date, and the row has two extra columns containing a latitude and date.
+
+In contrast, the Typhoon Halong data does not have any with 0's.
+
+2. The 23_Atlanta.csv contains a latitude value of 48 which is in Canada north of Michigan. Is this the result of an anonymozation process that you applied?
+
+3. The Roy study reduces the time span to 6 hours (instead of 1 day). Wouldn't this omit travelers who tweet from home in the morning and then from work more than 6 hours later?
+
+4. Paper states that it defines the concept of mobility resilience.
+
+
+"under disaster events human mobility goes through perturbation but still follows the same distributions (distribution of what?  Travel steps?) similar to the ones in a steady state, and the shift in the center of mass and radius of gyration in a perturbed state are correlated with the steady state radius of gyration. (Need an example.)"
+
+- Lacked a quantitative assessment
+- "Did not explore expected correlations of mobility resilience across different types of extreme events."
+
+
+
+Research has also shown that individual movement trajectories exhibited similar shapes after being rescaled by the radius of gyration 
+Qi Ryan Wang 2016 https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0147299
+Citing: González MC, Hidalgo CA, Barabási A-L. Understanding individual human mobility patterns. Nature. 2008;453(7196):779–82. pmid:18528393
+View Article PubMed/NCBI Google Scholar
+
+Also Qi Ryan Wang 2016:
+Values for the center of movement and the radius of gyration were correlated with their values during a steady state. From the following (To do: investigate):
+Cutter SL, Barnes L, Berry M, Burton C, Evans E, Tate E, et al. A place-based model for understanding community resilience to natural disasters. Global environmental change. 2008;18(4):598–606.
+
+# MemberSense
+
+## Privacy-Conscientious Data Exchange
+
+sql-differential-privacy Uber Repo  
+https://github.com/uber/sql-differential-privacy
+
+
+[Johnson, N., Near, J. P. & Song, D. Towards Practical Differential Privacy for SQL Queries. Proceedings VLDB Endowment 11, 526–539 (2018).](https://scholar.google.com/scholar_lookup?title=Towards%20Practical%20Differential%20Privacy%20for%20SQL%20Queries&author=Johnson%2CN.&author=Near%2CJ.%20P.&author=Song%2CD.&journal=Proceedings%20VLDB%20Endowment&volume=11&pages=526-539&publication_year=2018)  
+Flex App - Elastic local sensitivity protecting individual privacy
+
+Related Wired Article (an Uber project)
+https://www.wired.com/story/uber-privacy-elastic-sensitivity/
+
+Updates to Uber’s Open Source Project for Differential Privacy
+https://medium.com/uber-security-privacy/uber-open-source-differential-privacy-57f31e85c57a
+
+
+## Mobile phone data provides details on population movements
+
+[On the privacy-conscientious use of mobile phone data](https://www.nature.com/articles/sdata2018286)
+Nature.com Montjoye 2018
+
+Proposes four techniques for protecing privacy in the scientific use of mobile phone data, including privacy proteion of datasharing from Call Detailed Records (CDRs).
+
+1. Limited Release - Given to third-parties under a legal contract (sampled, limited longitudinality, slightly coarsened)  
+
+2. Pre-computed indicators and synthetic data. (number of calls, radius of gyration) or Aggregated: (Users per tower over time)  
+
+3. Remote access - Data are not released. Only aggregated data leaves server. Near-real time. (Allows uid to remain intact for tracking movement patterns.)  Main challenge: Funding and development (Since universities lack the security ethos, firms like Google may be more appropriate.)  
+
+4. Question-and-answer
+
+#2 example - "flow maps parameterized using mobile phone data by Flowminder as part of the fight against Ebola" (Wesolowski 2014)
+
+Montjoye 2018 cites the following as a rebutal to #2
+Pyrgelis, A., Troncoso, C. & Cristofaro, E. De What Does The Crowd Say About You? Evaluating Aggregation-based Location Privacy. PoPETs 2017(4): 156–176 (2017).
+
+#3 The remote access model described is used by CASD, a French collabration. Could the same be achieved with AWS?
+
+#4 Includes "differential privacy" as in 2018 Berkeley Uber study.
+
+OPAL (for "Open Algorithms") - "Aims to unlock the potential of private sector data for public good... by “sending the code to the data” in a safe, participatory, and sustainable manner."" 
+By partners around the MIT Media Lab, Imperial College London, Orange, the World Economic Forum and Data-Pop Alliance,
+https://www.opalproject.org/home-en
+
+
+## Possible Methodology
+
+3-hour increments by zip
+
+Avoid pseudonymized by converting all uid's to zipcode values (block level under remote access) and/or use differential privacy.
+
+
+## The influence of population density on mobility and geo-topics.
+
+Population-weighted opportunities (PWO) for travel destination selection - uses population density as a simple indicator of the willingness of people living in cities to travel further than 2 km (because more destinations are available). Social network density in cities could partially explain increased conversations around geo-topics.  
+
+Universal Predictability of Mobility Patterns in Cities (2014)
+http://rsif.royalsocietypublishing.org/content/11/100/20140834
+
+
+And a recent model by Xiao-Yong that allows for the differences between cities and countries (2018)
+
+Universal model of individual and population mobility on diverse spatial scales
+https://www.nature.com/articles/s41467-017-01892-8
+
+The hurricane study uses a radial measurement of population movement to compare perturbation differences between cyclones. The papers above demonstrates that radial distances differ between city and rural areas. PWO may be a factor explaining why the overall storm perturbation of a city may appear less extreme (more resilient) than a rural area which has fewer lifeline services.  
+
+Perhaps the population-weighted opportunities (PWO) model for destination selection could be duplicated for geo-topic selection in areas of population density.
+
+Universal Predictability of Mobility Patterns in Cities (2014)
+http://rsif.royalsocietypublishing.org/content/11/100/20140834
+
+
+Xiao-Yong recently applied PWO within a universally model (2018), using population to determine the amount of available opportunities that encourage travelers in urban areas to exceed 2 km. Perhaps in a similar manner, social network density in cities could be shown to increase geo-topic opportunities. 
+
+Population-weighted efficiency in transportation networks
+https://www.nature.com/articles/srep26377
+
+
+
+-----
+
+Twitter Developer - Loren account
+
+Who will have access:
+
+Loren, Georgia Institute of Technology - PhD in Computational Science and Civil Engineering
+Loren is an employee of the Georgia Department of Economic Development.
+Research using aggregated tweet data is being conducted for his Georgia Tech PhD independent of his state employment.
+
+Specific Use Cases:
+
+Data will be anonymized by zip code prior to use in maps showing mobility changes during storms.
+Anonymized zip code mobility data will be used for EPA sustainability project in Georgia on material flow.
+
+Data will be stored and processed in Amazon AWS. Only Loren will have access to data prior to anonymization by zipcode.
+Tweets will NOT be displayed at row level.  Data will be aggregated by zipcode using PostgreSql.
+
+Core business purpose:
+
+Data will be used to approximate movement patterns during storms and other extreme events.
+Generalized movement data will also be compared to flow of material supply chains to make sustainable (resilient) manufacturing and distribution recommendations.
+
+Work in progress:
+http://model.earth/tw-charts/
+https://datascape.github.io/community/
+https://datascape.github.io/state/
+
+</body>
+</html>

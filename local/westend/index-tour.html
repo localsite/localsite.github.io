@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>West End - Atlanta's Oldest Historic District</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="West End, Atlanta">
+    <meta name="author" content="Loren Heyns">
+
+    <!--
+
+    The following neighborhoods are SW sister neighborhoods with whom we share links, identity and similar character, problems and opportunities
+ 
+    Castleberry Hill http://castleberryhill.org/
+    Adair Park http://adairpark.com/
+    Westview http://www.westviewatlanta.com/
+    Capitol View http://capitolview.org/
+
+    To do:
+    Apply button rollover fade from brendanjerwin.com to .moreButton class.
+
+    Barbara
+    Carl Ness - pres
+    John Pavalin
+    Kathy Witt - land
+    Kritina Nadreau
+
+    Atlanta - West End Historic District
+
+    Atlanta West End
+
+    WEND
+    http://www.facebook.com/AtlantaWestEnd
+
+    General location
+    http://www.facebook.com/WestEndAtlanta
+    -->
+
+    <style type="text/css">
+      .navbar { /* prevents showing before bootstrap css is applied */
+        display: none;
+      }
+      .nav { /* prevents showing before bootstrap css is applied */
+        display: none;
+      }
+      .content-width {
+        max-width:1100px;
+      }
+
+      .vert-menu li ul {
+        display: none;
+      }
+      /* Switched to vert-menu instead - remove these */
+      .horizontal-menu {
+        display: block;
+        margin-bottom: 50px;
+        clear:both;
+      }
+      .horizontal-menu li {
+        float: left;
+        margin:0px;
+        margin-right: 10px;
+      }
+      .horizontal-menu li ul {
+        display: block;
+        margin:0px;
+      }
+      .horizontal-menu li ul li {
+        float:none;
+      }
+      .horizontal-menu li ul li a {
+        color:#fff;
+      }
+      
+    </style>
+
+    <link href="../../jquery/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../jquery/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!--script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script-->
+    <script type="application/javascript">window.jQuery || document.write(unescape('%3Cscript src="../../jquery/jquery.min.js"%3E%3C/script%3E'))</script>
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <script src="../../jquery/bootstrap/js/bootstrap-dropdown.js"></script>
+    <script src="../../jquery/bootstrap/js/bootstrap-collapse.js"></script>
+    <script src="../../jquery/bootstrap/js/bootstrap-carousel.js"></script>
+    <script src="../../jquery/bootstrap/js/bootstrap-transition.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#topMenuDiv').load('/jquery/bootstrap/menu-layout.html', function(){
+            });
+            $(function(){
+                // Start rotation
+               $('.carousel').carousel();
+            });
+        });
+    </script>
+
+
+    <style type="text/css">
+
+      /* Bootstrap overrides */
+      body {
+        background:#fff url(../core/elements/bkgd/screen-lite.gif);
+        -webkit-font-smoothing: antialiased;
+        padding-top: 30px; /* Dup of menu-layout.html for older versions on IE */
+        color:#555;
+        font-size:10pt;
+      }
+      #bodytop { /* Covers white space during loading. */
+        height:30px;
+        position: absolute;
+        top:0;
+        width:100%;
+        background: #333;
+      }
+      .navbar-inner {
+        max-width:1100px;
+        margin: 0px auto;
+      }
+      h3 { margin:0px; padding:0px;}
+      select {
+          background-color:#ffe; 
+          font-size: 10pt;
+          height:auto;
+      }
+      .headerTitle {
+        color:#eee;
+        filter: Shadow(Color=#333, Direction=125, Strength=1); /* IE */
+        text-shadow: #333 2px 2px 3px;
+        font-weight: normal;
+        font-family: OpenSans, 'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif;
+        font-family: Georgia, Times, 'Times New Roman', serif;
+        font-family: 'Lucida Console', Monaco5, monospace;
+        font-family: calibri, helvetica, arial, sans-serif;
+
+
+        font-size:24pt;
+        line-height: 28pt;
+        margin-top:2px;
+      }
+      /*
+      #headerRight {
+        background:#fff url(../go/westend/img/header/header-right.png);
+        background-repeat:no-repeat;
+        background-position:right;
+      }
+      */
+      .navbar-inverse {
+        /*
+        background: #B6C276; green
+        background: #21799c; blue
+        background: #488473; lite green
+        */
+      }
+      .navbar-inverse .brand, .navbar-inverse .nav > li > a {
+        color: #ccc;
+      }
+      /* Above are in MasterPage */
+
+      .carousel-caption p a {
+        color:#b95;
+      }
+      .sidebar-nav {
+        padding: 9px 0;
+      }
+      .sideItem {
+        margin-bottom: 8px;
+      }
+      .eventTitle {
+        font-size: 16px;
+        font-weight: normal;
+        line-height: 22px;
+        font-weight: bold;
+      }
+      .sideDate {
+        font-weight: bold;
+      }
+      .eventItem {
+        margin-bottom:10px;
+      }
+      .triTitle {
+        font-size: 19px;
+        font-weight: normal;
+        line-height: 22px;
+      }
+      .line {
+        border:0px;
+        margin:0px;
+        height:1px;
+        background-color:#ccc;
+        margin-bottom:18px;
+      }
+      .titleBar {
+        /*
+        background:#d5cfb7;
+        */
+        text-transform: uppercase;
+        color:#706d5e;
+        padding:0px 0px 1px;
+        border-bottom: 1px solid #ccc;
+        margin-bottom:10px;
+        font-size:11pt;
+      }
+      .titleNoBar { /* Not used - good for titles with alterations more like Adobe.com */
+        text-transform: uppercase;
+        margin-bottom:12px;
+        padding-bottom:3px 0px 3px;
+        border-bottom: 1px solid #ccc;
+
+        font-family: OpenSans, 'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif;
+        font-size: 20px;
+        font-weight: 300;
+        text-decoration: none;
+        text-rendering: optimizelegibility;
+      }
+      .moreButton {
+        -webkit-transition-delay: 0s;
+        -webkit-transition-duration: 0.5s;
+        -webkit-transition-property: background-color;
+        -webkit-transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+        background-attachment: scroll;
+        background-clip: border-box;
+        background-color: #EBEBEB;
+        color: #666;
+        display: inline-block;
+        font-family: 'PT Serif', Georgia, Times, 'Times New Roman', serif;
+        font-size: 13px;
+        height: 16px;
+        line-height: 16px;
+        padding:4px 12px 4px;
+        margin-bottom:5px;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+      }
+      ul.nav li.dropdown:hover ul.dropdown-menu {
+        display: block;    
+      }
+      .nav1 {
+        color:#333; /* footer */
+      }
+      .footerTitle {
+        color:#eee;
+        font-weight: bold;
+        font-size: 14pt;
+      }
+      .footerTitle:hover {
+        color:#eee;
+      }
+      .nav-pills .dropdown-menu {
+        margin-top: 0px;
+      }
+
+      .nav-pills {
+
+        margin-right:3px;
+        margin-bottom: 0px;
+      }
+
+      .nav-pills li a {
+        font-size:15px;
+        color:#333;
+        font-weight: normal;
+      }
+
+      #searchLabel
+      {
+        font-size:12pt; float:left; margin-right:7px; color:#fff; line-height: 28px;
+      }
+      @media (max-width: 767px) {
+        #searchLabel
+        {
+          display:none;
+        }
+      }
+
+      /* remove */
+      @media (max-width: 480px) {
+        .footerIcon
+        {
+          height:20px;
+        }
+      }
+      @media (max-width: 480px) { 
+        #featuredTopLeft { /* not used */
+          float:none;
+          max-width:300px;
+        }
+
+      }
+      /*
+      @media (max-width: 767px) { 
+      #headerRight {
+          height:100px;
+          background-position:right bottom;
+          background-size:250px;
+        }
+      }
+      */
+      /* override Google */
+      #footerNumber span.gc-cs-link
+      {
+        color: #000;
+        text-decoration: none;
+      }
+
+      .newsfeed{text-align:left; float:left; margin-right:4px}
+      .newsfeed ul{list-style:none;padding:0;margin:0;}
+      .newsfeed ul li{list-style:none;padding:4px 3px 6px 4px; margin:0px; margin-bottom:0px;border-bottom:1px solid #ccc;}
+      .newsfeed ul li: hover{ background-color:#ccc;}
+      .newsfeed ul li:last-child{margin-bottom:1px;}
+      .newsfeedTitle{font-size:12pt;font-weight: bold;}
+      /* background-color:#e6f2fa; */
+      #linked:hover{background-color:#eee;cursor:pointer;} 
+      .messagePostDate{color: #aaa; margin-bottom: 0px; font-family: 'lucida grande', tahoma, verdana, arial, sans-serif; font-size: 11px;}
+      .newsfeedDesc{ margin-top: 5px; margin-bottom: 4px; }
+      .fbImage{float:right; margin-left:10px; margin-bottom:2px; max-width:160px}
+      .comment{position:relative; overflow: hidden; background-color:#EDEFF4; border-bottom: 1px solid #E5EAF1; margin-top: 2px; padding:6px; font-family: 'lucida grande', tahoma, verdana, arial, sans-serif; font-size: 11px;}
+      .commentImage{float:left; margin-right:8px; height:32px}
+      .addComment{font-family: 'lucida grande', tahoma, verdana, arial, sans-serif; font-size: 11px;}
+
+      /* blue ADCBD7; lite green b1c4c1 */
+      .logoarea { text-align:center;  background:#0a543a; height:100px; color:#fff; padding-top: 9px; padding-bottom:6px;}
+    
+
+      /* MailChimp */
+      #mc_embed_signup .button {clear:both; background-color: #aaa; border: 0 none; border-radius:4px; color: #FFFFFF; cursor: pointer; display: inline-block; font-size:15px; font-weight: bold; height: 32px; line-height: 32px; margin: 0 5px 10px 0; padding:0; text-align: center; text-decoration: none; vertical-align: top; white-space: nowrap; width: auto;}
+      #mc_embed_signup .button:hover {background-color:#777;}
+      #mc_embed_signup input.email {display:block; margin:0 4% 10px 0; width:95%; min-width:130px;}
+      #mc_embed_signup input.button {display:block; margin:0 0 10px 0; padding:0 20px 0 20px; min-width:90px;}
+      .inputField { padding: 8px; font-size:12px; min-width:140px;}
+      .subscribeText { white-space: nowrap;}
+    </style>
+
+<!--
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-6360704-1']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  -->
+  </head>
+
+  <body>
+<div id="header" style="display:none"></div>
+        <div id="bodytop"></div>
+
+        <!-- Logo Area -->
+        <div class="logoarea">
+          <a href="/"><img src="../../go/westend/img/logos/westend-header-2.png" /></a>
+        </div>
+        <!-- End Logo Area -->
+        
+
+    <div id="topMenuDiv"></div>
+
+    <!-- header -->
+
+      <!-- http://www.flickr.com/photos/85332395@N04/7826479464/in/photostream 
+      url(../go/westend/img/header/bkgd-blossoms.jpg) no-repeat 100% 0; -->
+
+      <div style="position:relative; width:100%; overflow;hidden;">
+
+        <div id="headerRight" class="container-fluid content-width" style="color:#777; margin: 0px auto; padding-top:10px; padding-bottom:30px;">
+
+        <!-- menu -->
+        <ul class='nav nav-pills'>
+
+          <li class='dropdown'><a href='/' data-toggle='dropdown' class='nav1 dropdown-toggle'>Home</a></li>
+
+          <li class='dropdown'><a href='/about-west-end' data-toggle='dropdown' class='nav1 dropdown-toggle'>About West End <b class='caret'></b></a><ul class='dropdown-menu' id='menu1'>
+          <li><a href='/history'>Our History</a></li>
+          <li><a href='/directory'>Local Businesses</a></li>
+          <li><a href='/gallery'>Photo Gallery</a></li>
+          </ul></li>
+
+          <li class='dropdown'><a href='/development' data-toggle='dropdown' class='nav1 dropdown-toggle'>Development <b class='caret'></b></a><ul class='dropdown-menu' id='menu1'>
+          <li><a href='/beltline'>We're a Beltline Community!</a></li>
+          <li><a href='/npu-t'>Neighborhood Planning Unit :: NPU-T</a></li>
+          <li><a href='/lci'>Livable Centers Initiative (LCI)</a></li>
+          <li><a href='/cid'>Community Improvement Districts (CID)</a></li>
+          <li><a href='/phone-numbers'>City of Atlanta Contacts</a></li>
+
+
+          </ul></li><li class='dropdown'><a href='/wend' data-toggle='dropdown' class='nav1 dropdown-toggle'>Neighborhood Association <b class='caret'></b></a>
+          <ul class='dropdown-menu' id='menu1'>
+            <li><a href='/minutes'>Minutes</a></li>
+            <li><a href='/agenda'>Agenda</a></li>
+            <li><a href='/bylaws'>Bylaws</a></li>
+            <li><a href='/membership'>Membership</a></li>
+            <li><a href='/net/content/contacts.aspx?s=98596'>Board of Directors</a></li>
+            <li><a href='/committees'>Committees</a></li></ul>
+          </li>
+
+          <li class='dropdown'><a href='/newsletter' data-toggle='dropdown' class='nav1 dropdown-toggle'>Newsletter</a></li>
+
+          <li class='dropdown'><a href='/calendar' data-toggle='dropdown' class='nav1 dropdown-toggle'>Calendar</a></li>
+
+          <li class='dropdown'><a href='/merchandise' data-toggle='dropdown' class='nav1 dropdown-toggle'>Merchandise</a></li>
+
+          <li class='dropdown'><a href='/contact' data-toggle='dropdown' class='nav1 dropdown-toggle'>Contact Us</a></li>
+
+        </ul>
+      <!-- /menu -->
+      <div style="border-bottom:1px solid #7A0000"></div>
+
+          <!--
+          <br>
+          <div class="row-fluid">
+            <div class="span12" style="text-align:left">
+
+                <div>
+                  <img src="../../go/westend/img/logos/blocks-of-culture.png" style="float:left; margin-right:10px; height:60px" alt="" />
+
+                  <div style="overflow:hidden">
+                    <div class="headerTitle">
+                    West End Historic District
+
+                    </div>
+                    <div style="margin-top:4px;">
+                    &nbsp;Atlanta, Georgia
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+          -->
+
+        </div>
+
+      </div>
+      
+    <!--/header -->
+
+    <!--
+    <div style="position:relative; width:100%; overflow;hidden;">
+        <div style="color:#777; margin: 0px auto;border-bottom:2px solid #7A0000; max-width:1140px">
+          <div class="row-fluid">
+            <div class="span12" style="text-align:left">
+              <img src="../../go/westend/img/header/bkgd-blossoms.jpg" style="width:100%;max-width:1200px" />
+            </div>
+          </div>
+        </div>
+      </div>
+    -->
+
+    <div class="container-fluid" style="max-width:1100px; margin: 0px auto; background:#fff">
+
+
+
+      <!-- full body -->
+      <div class="row-fluid">
+        
+        <div class="span8">
+
+          <!-- GALLERY -->
+            <div id="myCarousel" style="min-height:200px" class="carousel slide corners">
+                <div class="carousel-inner">
+
+                  <div class="item active">
+                    <img src="../../go/westend/img/carousel/2013_WEND_Concert.jpg" width="100%" alt="">
+                    <div class="carousel-caption">
+                      <p><strong>2013 Historic West End Concert featuring Rhonda Thomas</strong><br>
+                        
+                    </div>
+                  </div>
+
+                  <div class="item">
+                    <img src="../../go/westend/img/carousel/2013_WEND_Tour.jpg" width="100%" alt="">
+                    <div class="carousel-caption">
+                      <p><strong>2013 Historic West End Tour of Homes</strong><br>
+                    </div>
+                  </div>
+
+                  <div class="item">
+                    <img src="../../go/westend/img/carousel/house-curved-porch.jpg" width="100%" alt="">
+                    <div class="carousel-caption">
+                      <p><strong>West End Historic Home</strong><br>
+                        Photo by 
+                        <a href="http://www.flickr.com/photos/46963090@N03/">vizual2</a> from the 
+                        <a href="http://www.flickr.com/groups/southwest-atlanta/pool/with/7987023889/" style="white-space:nowrap">Southwest Atlanta Flickr Group</a>.</p>
+                    </div>
+                  </div>
+
+                  <div class="item">
+                    <img src="../../go/westend/img/carousel/2012_WEND_Holiday_Party_1.jpg" width="100%" alt="">
+                    <div class="carousel-caption">
+                      <p><strong>2012 WEND Holiday Party</strong><br>
+                    </div>
+                  </div>
+                  
+                  <div class="item">
+                    <img src="../../go/westend/img/carousel/2012_WEND_Holiday_Party_2.jpg" width="100%" alt="">
+                    <div class="carousel-caption">
+                      <p><strong>2012 WEND Holiday Party Bartenders for the evening</strong><br>
+                    </div>
+                  </div>
+
+                  <div class="item">
+                    <img src="../../go/westend/img/carousel/2012_WEND_Holiday_Party_3.jpg" width="100%" alt="">
+                    <div class="carousel-caption">
+                      <p><strong>2012 WEND Holiday Party</strong><br>
+                    </div>
+                  </div>
+
+                </div>
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
+              </div>
+          <!-- /GALLERY -->
+
+          
+          <!-- left middle -->
+          <div class="row-fluid">
+
+          <div class="span12 bucket">
+            <div class="titleBar"><a href="https://twitter.com/atlantawestend"><img src="../../core/elements/icons/social/twitter-icon.png" style="margin-right:5px" /></a>NEWS &amp; HAPPENINGS</div>
+
+              
+
+              <!-- div class="sideItem">
+                <a href="https://www.facebook.com/pages/Friends-of-The-West-End-Library/132375930165187" class="eventTitle" target="library">West End Library Events</a><br>
+                Sewing, knitting and crocheting classes.
+              </div -->
+
+              <div class="sideItem">
+                <a href="http://www.wrensnestonline.com/" class="eventTitle" target="wren">Wren's Nest</a> - Enjoy music, storytelling and special events under the stars at the Wren's Nest. 
+              </div>
+
+              <div class="sideItem">
+                <a class="eventTitle" href="/beltline" target="trail">Explore the West End Trail</a> -
+                Phase 2 is now complete. Bring your bike or your walking shoes, 
+                there are miles in store for you to explore.
+                <!--
+                Video
+                http://nabewise.com/atlanta/west-end-4/videos/beltline-west-end-trail
+                -->
+              </div>
+
+              <div class="sideItem">
+                <a class="eventTitle" href="http://www.hammondshouse.org/current-exhibition.html" target="hammond">Hammonds House Museum</a><br>
+                <b>Homecoming: African American Family History in Georgia through May 5, 2013</b> 
+                <i>On loan from the Auburn Avenue Research Library</i>. 
+                <!-- span style="white-space:nowrap">Curated by Tracy Murrell.</span -->
+              </div>
+
+              <div class="sideItem">
+                <a class="eventTitle" href="/website">Submit your content to our website</a><br>
+                Share your insider knowledge about West End.
+                <span style="white-space:nowrap">Add events to our calendar and</span> lend your writing skills.
+                <!--
+                Your starting point for all things West End.-->
+               </div>
+
+            <div>
+              
+            </div>
+          </div><!--/span-->
+          </div><!--/row-->
+          <!-- /left middle -->
+          <br>
+
+          <!--
+          To fix scaling bug in IE 6-8, revert to something used in the bootstrap css used in the dsi bg project.
+          -->
+          <div class="titleBar">LOCAL ORGANIZATIONS</div>
+
+          <div style="padding:0px">
+            <div class="row-fluid">
+              <div class="span4 hero-unit" style="padding:8px;border:2px solid #ddc;">
+                <a href="/spelman-college"><img src="/files/westend/2012/screenshot2012-10-12at7.29.55am.png" alt="" /></a>
+                <h2 class="triTitle"><a href="/spelman-college">Spelman College</a></h2>
+                Preparing for higher learning - We encourage you to consider one of the colleges located in and around our West End neighborhood.
+                <p></p>
+              </div><!--/span-->
+
+              <div class="span4 hero-unit" style="padding:8px;border:2px solid #ddc;">
+                
+                    
+                <a href="/trees-atlanta"><img src="http://grantpark.org/files/gpna/2012/treesatlanta.jpg" alt="" /></a>
+
+                <h2 class="triTitle"><a href="/trees-atlanta">Trees Atlanta</a></h2>
+               
+                Planting and protecting trees in our community is a hands-on, collaborative effort.
+                Trees Atlanta is an invaluable partner in preserving Atlanta's urban forest.
+
+              </div><!--/span-->
+
+
+              <div class="span4 hero-unit" style="padding:8px;border:2px solid #ddc;">
+
+                <a href="/directory/partners"><img src="../../go/westend/img/med/est1835.jpg" alt="" /></a>
+                <h2 class="triTitle"><a href="/directory/partners">Add Your Business</a></h2>
+                Join our online partners, a group of businesses serving West End 
+                and the communities surrounding our great intown neighborhood.
+                <!--
+                https://www.google.com/search?tbm=nws&q=%22West+End%22+Atlanta
+                -->
+              </div><!--/span-->
+            </div><!--/row-->
+          </div>
+
+
+
+        </div><!--/span-->
+
+        <div class="span4">
+
+          <div>
+
+            <!-- http://DreamStudio.us6.list-manage.com/subscribe/post?u=5064b2cbfee145812a44299b4&amp;id=adcf50cf6b -->
+            <!-- Begin MailChimp Signup Form -->
+
+            <div id="mc_embed_signup">
+            <form action="http://atlantawestend.us4.list-manage1.com/subscribe/post?u=a8e854276563e8c44a122a8bf&amp;id=0c218aabb7" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" style="padding:0px; margin-bottom:20px" target="_blank" novalidate>
+              <div class="titleBar">West End eNews</div>
+              <input type="email" value="" name="EMAIL" class="email inputField" id="mce-EMAIL" placeholder="Enter your email address" required>
+
+              <div style="float:left; margin-right:8px">
+
+                <div class="subscribeText">First Name</div>
+                <input type="text" value="" name="FNAME" class="inputField" id="mce-FNAME" placeholder="Enter your First Name">
+
+                </div>
+
+                <div style="overflow:hidden">
+
+                <div class="subscribeText">Last Name</div>
+                <input type="text" value="" name="LNAME" class="inputField" id="mce-LNAME" placeholder="Enter your Last Name">
+
+                </div>
+
+
+              <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button" style="margin-top:6px"></div>
+            </form>
+            </div>
+
+            <!--End mc_embed_signup-->
+
+            <div class="titleBar">Featured Events
+            </div>
+            <div class="sideText" style="overflow:hidden; margin-bottom:15px">
+
+              <div class="sideItem">
+                <a href="http://atlantawestend.com/event/100299?c=2243012" class="eventTitle" target="homes">2013 Tour of Homes Tickets on Sale</a><br>
+                      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                           <input type="hidden" name="cmd" value="_s-xclick">
+                           <input type="hidden" name="hosted_button_id" value="VYFF949RML8SW">
+                           <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                           <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                      </form>
+              </div>
+
+              <div class="sideItem">
+                <a href="http://atlantawestend.com/event/100297?c=2243011" class="eventTitle" target="concert">2013 Concert Tickets on Sale</a><br>
+                      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                              <input type="hidden" name="cmd" value="_s-xclick">
+                              <input type="hidden" name="hosted_button_id" value="VN3KFE5X4ZQ8C">
+                                   <table>
+                                       <tr><td><input type="hidden" name="on0" value="Ticket Pricing">Ticket Pricing</td></tr><tr><td><select name="os0">
+	                               <option value="General Admin">General Admin $25.00 USD</option>
+	                               <option value="Table of 10">Table of 10 $250.00 USD</option>
+                                     </select> </td></tr>
+                                   </table>
+                             <input type="hidden" name="currency_code" value="USD">
+                             <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                             <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                    </form>
+              </div>
+
+              <!--
+              <div class="eventItem">
+                <h3 class="eventTitle"><a href="#" target="results">West End Marathon</a></h3>
+                <div class="sideDate">Saturday 2012</div>
+                Good luck to everyone running in our annual 10K.  Let us know upcoming race dates.
+              </div>
+              -->
+
+              
+              <!--
+              <div class="eventItem">
+                <h3 class="eventTitle"><a href="/event/98981" target="festival">2012 West End Holiday Party</a></h3>
+                <div class="sideDate">December 1, 2012, Saturday at 7:00 pm</div>
+              </div>
+
+              
+
+              <div class="eventItem">
+                <h3 class="eventTitle"><a href="#" target="festival">Candlelight Picnic & Concert</a></h3>
+                <div class="sideDate">Saturday, May 2013, 5pm-10pm</div>
+                Check out the festival and volunteer.  Date to be determined.
+              </div>
+
+              
+              <div class="eventItem">
+                <h3 class="eventTitle"><a href="#" target="overview"> 
+                West End Restaurant Night (proposed)</a></h3>
+                <div class="sideDate">A Friday evening in Feb 2013</div>
+                Warm up with live music and great dining at area restaurants participating in our special night.
+                Let us know if you'd like to help set a date.
+              </div>
+              -->
+
+              <a class="moreButton" href="/calendar">More events &raquo;</a>
+              <a class="moreButton" href="/net/calendar/addevent.aspx">Add event</a>
+              
+
+            </div>
+
+            <!--
+            <div class="titleBar">RECENT UPDATES</div>
+
+            <div style="overflow:hidden; margin-bottom:15px">
+
+              <div class="sideItem">
+                <h3 class="eventTitle"><a href="#" target="overview"> 
+                Security Patrol Updates Registration</a></h3>
+                You can now associate yourself to a primary zone and additional surrounding zones.<br>
+              </div>
+
+              <a class="moreButton" href="../../core/news/list.aspx?tid=84001">More news &raquo;</a>
+              <a class="moreButton" href="../../core/item/add.aspx?tid=84001&homepg=1">Add content</a>
+
+            </div>
+            -->
+
+            <!--
+            <div class="titleBar">FEATURED PARTNER</div>
+
+            <a href="http://thebusybeecafe.com"><img src="../../go/westend/img/med/busybee.jpg" style="margin-bottom:10px; margin-left: 10px; max-width:120px; float: right" alt=""></a>
+            <a href="http://thebusybeecafe.com" class="eventTitle">Busy Bee Restaurant</a><br>
+            Join us for the best sourthern cookin' this side of your grandma's kitchen.<br><br>
+
+            <div style="clear:both"></div>
+
+            <a class="moreButton" href="/directory">More Organizations &raquo;</a>
+
+            <br><br>
+            -->
+
+            <!--
+            <div class="titleBar">FEATURED PARTNERS</div>
+            -->
+
+            <!-- Community -->
+
+            <div class="titleBar"><a href="https://www.facebook.com/atlantawestend" target="fb"><img src="../../core/elements/icons/social/facebook-icon.png" style="margin-right:5px" /></a>FACEBOOK</div>
+        
+            <script type="text/javascript" src="../../jquery/content/facebook/posts.js"></script>
+
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    showComments = false;
+                    fbFolder = 'atlantawestend';
+                    fbFetch('117370968285365|5XkqBE8fUp29ZaTRAMTmAAfCFvk'); // Access token from Neighborhood App.
+                });
+            </script> 
+            <div class="newsfeed" style="margin-bottom:20px"></div>
+
+            <!-- Community End -->
+
+
+          </div>
+
+
+        </div><!--/span-->
+
+      </div><!--/row-->
+      <!-- /full body -->
+      
+
+    </div><!--/.fluid-container-->
+
+    <!-- footer -->
+    <footer>
+      <!-- #3E0C0D #511616 -->
+      <div style="background:#c3c3c1; min-height:150px; text-align:left;">
+        <div class="container-fluid" style="min-height:90px; background:#cacbc4; max-width:1100px; margin: 0px auto;">
+
+          <div class="row-fluid">
+
+            <div class="span12">
+                <div style="float:left; font-size:12pt; margin-top:20px; margin-bottom:20px; font-family:Arial, Helmet, Freesans, sans-serif">
+                  <div style="margin-bottom:6px">
+                  <a href="/" class="footerTitle">West End Historic District</a>
+                  </div>
+
+                  <!-- site menu -->
+                  <ul class='vert-menu'>
+
+                  <li>
+                  <a href='/about-west-end' data-toggle='dropdown' class='nav1 dropdown-toggle'>About West End</a>
+                  </li>
+
+                  <li class='dropdown'>
+                  <a href='/development' data-toggle='dropdown' class='nav1 dropdown-toggle'>Development</a>
+                  </li>
+
+                  <li class='dropdown'>
+                  <a href='/wend' data-toggle='dropdown' class='nav1 dropdown-toggle'>Neighborhood Association</a>
+                  </li>
+
+                  <li class='dropdown'>
+                  <a href='/newsletter' data-toggle='dropdown' class='nav1 dropdown-toggle'>Newsletter</a>
+                  </li>
+
+                  <li class='dropdown'><a href='/calendar' data-toggle='dropdown' class='nav1 dropdown-toggle'>Calendar</a></li>
+
+                  <li class='dropdown'><a href='/merchandise' data-toggle='dropdown' class='nav1 dropdown-toggle'>Merchandise</a></li>
+
+                  <li class='dropdown'><a href='/contact' data-toggle='dropdown' class='nav1 dropdown-toggle'>Contact Us</a></li>
+
+                  </ul>
+                  <!-- /site menu -->
+
+                </div>
+
+                <!-- Anchor Partners -->
+                <div style="overflow:hidden; padding:20px; padding-left:30px">
+
+
+                    <span class="footerTitle">Welcome to our new website</span><br>
+                    <div style="padding-top:10px; font-size:14pt; min-height:85px">
+                    Please <a href="/contact">contact us</a> if you have any comments or additions.
+                    </div>
+
+                    <!--
+                    <span class="footerTitle">Premier Partners</span><br>
+                    <div style="padding-top:10px; min-height:85px">
+                    <img src="../../go/westend/img/logos/partners/kroger.png" alt="" />
+                    </div>
+                    -->
+
+                    <br><br>
+                    <div style="float:right">
+                      <a href="http://neighborhood.org">Site by Neighborhood.org</a>
+                    </div>
+
+                    &copy; 2012 - West End Neighborhood Development (WEND)
+
+
+                </div>
+                <!-- Anchor Partners End -->
+
+
+            </div><!--/span-->
+          </div><!--/row-->
+
+        </div>
+      </div>
+    </footer>
+    <!--/footer -->
+
+    
+</body></html>

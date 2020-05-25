@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Video Test</title>
+  <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+  <link rel="stylesheet" href="https://cdn.plyr.io/3.5.3/plyr.css" />
+</head>
+<body>
+<div id="header" style="display:none"></div>
+
+<div class="plyr__video-embed" id="player">
+    <iframe
+        src="https://www.youtube.com/embed/CZhbFT3qhvo?start=100&origin=https://plyr.io&iv_load_policy=3&modestbranding=1&playsinline=1&showinfo=0&rel=0&enablejsapi=1"
+        allowfullscreen
+        allowtransparency
+        allow="autoplay"
+    ></iframe>
+</div>
+
+
+<script src="https://cdn.plyr.io/3.5.3/plyr.js"></script>
+
+ <script>
+  const player = new Plyr('#player', {autopause:'true',color:'adef00'});
+  window.player = player;
+
+  setTimeout(function(){  
+    player.currentTime = 50; // Seeks to 10 seconds
+    player.volume = 0.5;
+    player.muted = false;
+    player.color = 'adef00';
+    player.play();
+  }, 1000);
+</script>
+</body>

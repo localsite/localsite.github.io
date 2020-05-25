@@ -1,0 +1,413 @@
+/* Mega Menu CSS */
+/* In use by GPCP */
+
+/* HTML5 reset for older browsers */
+footer, header, menu, nav {
+	display: block;
+}
+
+/* Reset */
+#megaMenu div, #megaMenu span, #megaMenu ul, #megaMenu li, #megaMenu a{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+
+/* Hide text meant for screen readers */
+.screen-reader-text, .section-heading {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+}
+#access {
+	display:block; /* Allows template css to hide unformatted list */
+	position: relative; /* hack for IE7 */
+	z-index: 999; /* 99 was hack for IE7.  99999 is too high for neighborhood.org. but increase to 99999 to reside over gallery mainContainer */
+}
+
+/**** ALL ****/
+#megaMenu{
+	position:relative;
+	line-height:1em;
+	overflow:visible;
+	zoom:1;
+	display:block;
+}
+
+#megaMenu ul {		/* All UL */
+	list-style:none outside none;
+	margin:0px;
+	padding:0px;
+	font-family:Arial, sans-serif;
+	position:relative;
+	overflow:visible;
+	zoom:1;
+}
+#megaMenu ul.megaMenu li{
+	margin-bottom:0px;
+	list-style-type: none;
+	list-style-image: none;
+	border:none;
+}
+#megaMenu ul.megaMenu li a{
+	line-height:1.2em;
+	text-decoration:none;
+}
+/**** TOP LEVEL ****/
+
+#megaMenu ul.megaMenu{
+	float:left;
+	z-index:100;
+}
+#megaMenu.megaMenuHorizontalXXX ul.megaMenu{
+	width:100%;
+}
+#megaMenu ul.megaMenu > li{
+	float:left;
+	position:relative;
+	display:block;
+	/*line-height:1em;*/
+	padding:0px 0px;
+	margin:0px;
+	z-index:200;
+	zoom:1;
+}
+#megaMenu ul.megaMenu > li > a{
+	display:block;
+	padding:.7em 10px;
+	
+	position:relative;
+	z-index:400;
+	zoom:1;
+	
+	border-width:1px 1px 1px 1px;	/* No Bouncing */
+	border-style:solid;
+	border-color:transparent;
+}
+#megaMenu ul.megaMenu > li:hover > a,
+#megaMenu ul.megaMenu > li.megaHover > a{
+	z-index:600;
+}
+
+
+/**** DROP LEVEL ****/
+
+#megaMenu ul ul.sub-menu{
+	display:none;
+	position:absolute;
+	z-index:500;
+	float:left;
+	top:100%;
+	zoom:1;
+	overflow:visible;
+	text-align:left;
+}
+#megaMenu ul ul.sub-menu-1,
+#megaMenu ul li.ss-nav-menu-reg ul.sub-menu{
+	min-widthX:98%;
+}
+#megaMenu ul li.ss-nav-menu-mega ul.sub-menu li{
+	min-width:100px;
+}
+#megaMenu ul li.ss-nav-menu-reg ul.sub-menu li{
+	min-width:50px;
+}
+#megaMenu ul ul.sub-menu li a{
+	padding:.3em 10px;
+	margin:.2em 0px;
+	line-height:1.2em;
+	width:auto;
+	display:block;
+}
+#megaMenu ul li.ss-nav-menu-mega ul ul.sub-menu li a,
+#megaMenu ul ul.sub-menu li a{
+	background:transparent;
+}
+#megaMenu.megaMenu-nojs ul li:hover > ul.sub-menu-1 {
+	display: block;
+}
+#megaMenu.megaMenu-withjs ul li:hover > ul.sub-menu-1 {
+	display: none;
+}
+#megaMenu ul li.ss-nav-menu-mega  ul.sub-menu ul.sub-menu{
+	display:block;
+	position:relative;
+	top:auto;
+	left:auto;
+}
+#megaMenu li ul.sub-menu{
+	box-shadow:none;
+	-moz-box-shadow:none;
+	-webkit-box-shadow:none;
+}
+#megaMenu li.ss-nav-menu-mega ul.sub-menu.sub-menu-1{
+	padding-bottom:8px;
+	border:1px solid transparent;
+	padding:10px;
+	min-width:220px;
+	overflow:hidden;
+}
+#megaMenu li.ss-nav-menu-mega.ss-nav-menu-mega-alignRight ul.sub-menu.sub-menu-1{
+	right:0px;
+	left:auto;
+}
+#megaMenu li.ss-nav-menu-mega  ul.sub-menu-1 > li{
+	display: inline-block;
+	float:left;
+	margin-top:5px;
+	position:relative;
+}
+
+#megaMenu ul li.ss-nav-menu-mega  ul ul.sub-menu li{
+	display: block;
+}
+
+
+
+#megaMenu ul li{
+	font-size:12px;
+	list-style-image:none;
+	/*position:relative;*/
+}
+#megaMenu ul li.ss-nav-menu-mega  ul.sub-menu li{
+	font-size:11px;
+	min-width:100px;
+}
+#megaMenu ul li.ss-nav-menu-mega ul.sub-menu li a{
+	width:auto;
+	display:block;
+	background:transparent;
+}
+#megaMenu ul li.ss-nav-menu-mega ul.sub-menu > li:hover > a{
+	background: transparent;
+}
+#megaMenu ul li.ss-nav-menu-mega ul li.ss-nav-menu-item-depth-1{
+	margin-right:30px;
+}
+#megaMenu ul li.ss-nav-menu-mega ul ul.sub-menu{
+	width:auto;
+	float:none;
+}
+#megaMenu ul li.ss-nav-menu-mega ul ul.sub-menu li{
+	display:block;
+	float:none;	
+}
+#megaMenu ul li.ss-nav-menu-mega .ss-nav-menu-verticaldivision{
+	clear:both;
+}
+#megaMenu ul li.ss-nav-menu-mega .sub-menu-newcol{
+	float:left;
+}
+
+
+#megaMenu li.ss-nav-menu-mega .ss-nav-menu-header a{
+	font-weight:normal;
+}
+
+#megaMenu li.ss-nav-menu-mega .ss-nav-menu-header > a{
+	font-weight:bold;
+	margin-bottom:4px;
+}
+#megaMenu li.ss-nav-menu-mega .megaMenu-thumb{
+	width:15px;
+	height:15px;
+	margin-right:5px;
+	vertical-align:middle;
+}
+#megaMenu ul li.ss-nav-menu-reg a{
+	display:block;
+}
+#megaMenu ul li.ss-nav-menu-reg ul.sub-menu-1{
+	border:1px solid transparent;
+	padding-bottom:8px;
+}
+#megaMenu ul li.ss-nav-menu-reg ul.sub-menu li a{
+	margin:0px;
+}
+#megaMenu ul li.ss-nav-menu-reg ul.sub-menu ul.sub-menu{
+	top:-1px;
+	border-style:solid;
+	border-width:1px;
+}
+#megaMenu.megaMenu-nojs ul li.ss-nav-menu-reg ul.sub-menu > li:hover > ul.sub-menu{
+	display:block;
+	left:100%;
+}
+#megaMenu.megaMenu-withjs ul li.ss-nav-menu-reg ul.sub-menu > li > ul.sub-menu{
+	display:none;
+	left:100%;
+	top:0;
+}
+
+#megaMenu ul li.ss-nav-menu-reg li.megaReg-with-sub > a{
+	background-image:url(images/subtri.png);
+	background-position: 94% 50%;
+	background-repeat: no-repeat;
+	padding-right:15px;
+}
+#megaMenu ul li.mega-with-sub > a,
+#megaMenu ul li.ss-nav-menu-mega > a{
+	background-image:url(images/toptri.png);
+	background-position: 97% 50%;
+	background-repeat: no-repeat;
+	padding-right:20px;
+	
+	display:block;
+}
+
+#megaMenu ul li.ss-nav-menu-mega a{
+	/*background-position: 95% 50%;*/
+}
+
+#megaMenu ul li.ss-nav-menu-mega ul.sub-menu li.ss-nav-menu-highlight > a,
+#megaMenu ul li.ss-nav-menu-reg ul.sub-menu li.ss-nav-menu-highlight > a{
+	color:#555;
+}
+
+#megaMenu .wpmega-link-title{
+	display:block;
+	line-height:1.4em;
+}
+#megaMenu .wpmega-item-description{
+	display:inline;
+	clear:none;
+	float:none;
+	line-height:10px;
+	font-size:11px;
+	padding-bottom:3px;
+	font-weight:normal;
+}
+#megaMenu .ss-nav-menu-with-img{
+	min-height:20px;			/* Height of Pic + Space */
+}
+#megaMenu > ul > li.ss-nav-menu-with-img{
+	min-height:0px;
+}
+#megaMenu .ss-nav-menu-with-img img{
+	float:left;
+}
+#megaMenu .ss-nav-menu-with-img.ss-nav-menu-notext img{
+	float:none;
+}
+#megaMenu .ss-nav-menu-with-img.ss-nav-menu-notext .wpmega-item-description{
+	padding-left:0px;	
+	padding-bottom:0px;
+}
+#megaMenu .ss-nav-menu-with-img > a > .wpmega-link-title,
+#megaMenu .ss-nav-menu-with-img > a > .wpmega-link-description,
+#megaMenu .ss-nav-menu-with-img > a > .wpmega-item-description{
+	padding-left:30px;			/* Width of Pic + Space */
+	display:block;
+}
+
+/*
+FROM STYLES.css
+*/
+
+/* TOP LEVEL */
+#megaMenu ul.megaMenu {
+	float:left;
+	background: transparent;
+	margin: 0 0 0 10px;
+}
+
+/* Centers vertically */
+#megaMenuXXX ul li.ss-nav-menu-item-depth-0 > a{
+	padding: 4px 12px 4px 13px !important;
+	padding: 4px\9 10px\9 4px\9 12px\9 !important; /* hack for IE8 */
+}
+
+/* ARROWS */
+#megaMenu ul li.mega-with-sub > a,
+#megaMenu ul li.ss-nav-menu-mega > a{
+	background-image: url(arrow-down.png) !important;
+	/*
+	background-position: 1% 45% !important;
+	*/
+	background-position: 94% 45% !important;
+	background-repeat: no-repeat !important;
+}
+#megaMenu ul.megaMenu > li > a {
+	display:block;
+	position:relative;
+	background: transparent;
+	color: #fff;
+	font-family: hypatia-sans-pro-1,hypatia-sans-pro-2,"Helvetica","Arial",sans-serif;
+	font-size: 12px;
+	text-shadow: none;
+	
+	/*
+	font-weight: 600;
+	text-transform:lowercase;
+	*/
+	line-height: 16px;
+	border: none;
+	margin: 2px 0 0 0;
+}
+#megaMenu ul.megaMenu > li:hover > a,
+#megaMenu ul.megaMenu > li > a:hover,
+#megaMenu ul.megaMenu > li.megaHover > a {
+	background-color: #fafef4 !important;
+	filter: alpha(opacity=95); opacity: 0.95;
+	color: #555 !important;
+	margin: 2px 0 0 0 !important;
+}
+
+/* DROP DOWN CONTAINER */
+#megaMenu li.ss-nav-menu-mega ul.sub-menu.sub-menu-1,
+#megaMenu li.ss-nav-menu-reg ul.sub-menu {
+	background-color: #fafef4 !important;
+	filter: alpha(opacity=95); opacity: 0.95;
+	border: none !important;
+	padding: 10px 5px 20px 10px !important;
+}
+
+/* DROP DOWN SECTION TITLES */
+#megaMenu ul li.ss-nav-menu-mega ul.sub-menu-1 > li > a, 
+#megaMenu ul li.ss-nav-menu-mega ul.sub-menu-1 > li:hover > a, 
+#megaMenu ul li.ss-nav-menu-mega ul ul.sub-menu .ss-nav-menu-header > a,
+.wpmega-widgetarea h2.widgettitle{
+	color: #A3BDD7;
+	font-family: hypatia-sans-pro-1,hypatia-sans-pro-2,"Helvetica","Arial",sans-serif;
+	font-size: 14px;
+	font-style: italic;
+	font-weight: 700;
+	text-transform: uppercase;
+	text-decoration: none;
+	text-shadow: none;
+	
+	margin: 0;
+	padding: 0 10px 5px 10px;
+}
+
+/* DROP DOWN TERTIARY LINKS */
+#megaMenu ul li.ss-nav-menu-mega ul ul.sub-menu li a, #megaMenu ul ul.sub-menu li a {
+	background: transparent;
+	color: #555;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: normal;
+	text-transform: none;
+	line-height: 16px;
+	margin: 0;
+	padding: 3px 10px;
+	width: auto;
+	border-left: 1px solid #4E80B3;
+	
+	-moz-transition: background 0.3s ease;
+	-o-transition: background 0.3s ease;
+	-webkit-transition: background 0.3s ease;
+	transition: background 0.3s ease;	
+}
+#megaMenu ul li.ss-nav-menu-mega ul ul.sub-menu li a:hover, #megaMenu ul ul.sub-menu > li:hover > a{
+	color: #fff;
+	background: #9ac384;
+	text-decoration: none;
+	padding: 3px 10px;
+}
+
+
+

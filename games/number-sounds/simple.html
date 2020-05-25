@@ -1,0 +1,213 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Data Layout</title>
+<link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+<link rel="stylesheet" href="../../localsite/css/swiper.min.css">
+
+<style>
+    html, body {
+      position: relative;
+      height: 100%;
+    }
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+    .swiper-container {
+      width: 100%;
+      height: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .swiper-slide {
+      text-align: center;
+      background: #fff;
+      /*
+      
+      font-size: 18px;
+      
+      */
+      /* Center slide text vertically, and horizontally */
+      
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+      
+      
+      overflow: hidden;
+    }
+    .swiper-slide img {
+
+    }
+    :focus {
+        outline-width: 0px;
+    }
+
+    /* Additions */
+    .swiper-slide .title {
+      font-size: 41px;
+      font-weight: 300;
+    }
+    .swiper-slide .subtitle {
+      font-size: 21px;
+    }
+    .swiper-slide .text {
+      font-size: 14px;
+      max-width: 400px;
+      line-height: 1.3;
+    }
+
+    /* Overrides */
+    .swiper-pagination-bullet {
+        width: 8px;
+        height: 8px;
+        display: inline-block;
+        border-radius: 100%;
+        background: #ccc;
+        opacity: .8;
+    }
+    .swiper-pagination-bullet-active {
+        opacity: 1;
+        background: #777;
+    }
+    .swiper-button-prev {
+        background-image: url(../img/plyr/arrow-prev.png) !important;
+        left: -18px;
+    }
+    .swiper-button-prev:hover {
+        background-image: url(../img/plyr/arrow-prev-hover-blue.png) !important;
+    }
+    .swiper-button-next {
+        background-image: url(../img/plyr/arrow-next.png) !important;
+        right: -18px;
+    }
+    .swiper-button-next:hover {
+        background-image: url(../img/plyr/arrow-next-hover-blue.png) !important;
+    }
+    .swiper-button-next, .swiper-button-prev {
+        background-size: 57px 57px;
+        width: 100px;
+        height: 100px; 
+    }
+
+    .box {
+      text-align: left;
+      position: absolute;
+      left: 80px;
+      top: 90px;
+      background-color: rgba(250,250,256,.85);
+      padding: 30px 20px 20px 30px
+    }
+  </style>
+</head>
+<body>
+<div id="header" style="display:none"></div>
+
+<!--
+  https://www.pinterest.com/pin/685884218228774267/
+-->
+<div class="swiper-container">
+<div class="swiper-wrapper">
+
+    <div class="swiper-slide" data-hash="georgia"><img class="swiper-lazy" src="../../state/img/hero/ian-baldwin-27931-unsplash.jpg" style="width:100%;opacity:0.6"></div>
+
+    <div class="swiper-slide" data-hash="maya">
+      
+      <img class="swiper-lazy" src="img/panorama1.webp">
+      <!-- Preloader image -->
+      <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+
+      <div class="box">
+        <div class="title">Slide 1</div>
+        <div class="subtitle" data-swiper-parallax="-200">Subtitle</div>
+        <div class="text" data-swiper-parallax="-100">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla laoreet justo vitae porttitor porttitor. Suspendisse in sem justo. Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod. Aliquam hendrerit lorem at elit facilisis rutrum. Ut at ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec, tincidunt ut libero. Aenean feugiat non eros quis feugiat.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="swiper-slide" data-hash="stairs">
+      <img class="swiper-lazy" src="img/stairs1.jpg">
+      <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+    </div>
+
+    <div class="swiper-slide" data-hash="porch">
+      <img class="swiper-lazy" src="img/porch1.jpg" style="max-height:150%">
+      <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+    </div>
+
+    <!--
+    <div class="swiper-slide" data-hash="georgia-ice">
+
+      <iframe width="100%" height="100%" src="https://player.vimeo.com/video/120108729?autoplay=1&background=1" frameborder="0" allowXX="autoplay; fullscreen" allowfullscreen></iframe>
+      <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+    </div>
+    -->
+
+    <!--
+    <div class="swiper-slide" data-hash="maya-video">
+      <iframe width="100%" height="100%" src="https://www.youtube.com/embed/DAZrVpIoW_0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+    </div>
+
+    <div class="swiper-slide" data-hash="6">Slide 6
+
+
+    </div>
+    
+    -->
+
+    
+
+</div>
+
+<div class="swiper-pagination"></div>
+<!--
+<div class="swiper-pagination swiper-pagination-white"></div>
+-->
+<div class="swiper-button-prev"></div>
+<div class="swiper-button-next"></div>
+</div>
+
+<script src="../../localsite/js/swiper.min.js"></script>
+
+<script>
+    var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      lazy: true,
+      loop: true,
+      effect: 'fade',
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      hashNavigation: {
+        watchState: true,
+      },
+    });
+  </script>
+</body>
+</html>

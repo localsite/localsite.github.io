@@ -1,0 +1,167 @@
+﻿
+<!-- DIRECTORY MENU -->
+<script type="text/javascript">
+    $(document).ready(function() {
+
+        // toggles the slickbox on clicking the noted link 
+        $('a#sm_toggle').click(function() {
+            $('#sm_outer').slideToggle(400);
+            return false;
+        });
+
+    });
+
+    function toggleDirectory() {
+        $('#sm_outer').slideToggle(400);
+        $('#HeaderImage').slideToggle(400);
+        //return false;
+    }
+</script> 
+
+<style type="text/css">
+#sm_outer {
+	displayX:				none;
+	width:                  100%;
+	min-width:              830px;
+
+}
+#sm_inner {
+	background:				url(../../core/elements/dots/333-80.png);
+	line-height: 1;
+	text-align: left;
+}
+#sm_inner:hover {
+	backgroundXX:			url(../../core/elements/dots/black85.png);
+}
+.menuUL {
+    margin:					0;
+    padding:                0;
+    list-style:				none;
+}
+.sm_column {
+	float:					left;
+	width:					135px;
+	padding:				0px 15px 20px 15px;
+	border-right:           solid 1pt #888;
+}
+.sm_column ul li 
+{
+	padding:				3px 0;
+}
+
+.sm_column ul li li 
+{
+	padding:				3px 0 3px 15px;
+}
+.sm_column h3 
+{
+	margin:					0;
+	font-size:				14px;
+	padding:				25px 0 5px 0;
+}
+.sm_column h3 a:link, .sm_column h3 a:visited {
+	color:					#fff;
+}
+.sm_column li a:link, .sm_column li a:visited {
+	color:					#fff;
+}
+.clear {
+	clear:					both;
+	height:					0px;
+	font-size: 0px;
+	line-height: 0px;
+}
+</style>
+
+<!--
+<a id="sm_toggle" href="">Business Directory - BETA</a>
+
+<a href="" onclick="javascript:toggleDirectory();return false;">Show Directory123</a>
+-->
+
+<div id="sm_outer" class="MasterAll"> 
+	<div id="sm_inner"> 
+ 
+		<div class="sm_column">			
+			<h3><a href="/net/location/proximity.aspx?tid=31400">Art & Design</a></h3> 
+			<ul class="menuUL">
+				<li style="margin:0;margin-left:0;"><a href="/net/location/proximity.aspx?tid=17720">Galleries</a></li>
+				<li><a href="/net/location/proximity.aspx?tid=31050">Marketing</a></li>
+				<li><a href="/net/location/proximity.aspx?tid=31100">Websites</a></li>
+			</ul>
+			<h3><a href="/net/location/proximity.aspx?tid=16610">Restaurants</a></h3> 
+			<ul class="menuUL"> 
+				<li><a href="/net/location/proximity.aspx?tid=16610">Great for Families</a></li> 
+				<li><a href="/net/location/proximity.aspx?tid=16614">Bars & Nightlife</a><br><br></li>
+				<li><a href="<%=PUP.GetShortLink("/partner-activation?tid=" + PUP.GetRequestString("tid"),0)%>"><img src='/core/elements/arrows/rect-dark.gif' width='9' height='9' alt='' /> Add Your Business</a></li>
+				<li><a href="<%=PUP.GetShortLink("/partner-activation?tid=" + PUP.GetRequestString("tid"),0)%>"><img src='/core/elements/arrows/rect-dark.gif' width='9' height='9' alt='' /> Renew Your Listing</a></li>
+			</ul>
+		</div> 
+ 
+		<div class="sm_column"> 
+			<h3><a href="http://expressionengine.com/downloads/">Community</a></h3> 
+			<ul class="menuUL">
+			    <li><a href="/net/location/proximity.aspx?tid=38060">Childcare</a></li>
+			    <li><a href="/net/location/proximity.aspx?tid=36000">Nonprofits</a></li>
+			    <li><a href="http://grantparkparents.org">Parent Network</a></li>
+				<li><a href="/net/location/proximity.aspx?tid=31140">Pets &amp; Vets</a></li>
+			    <li><a href="/net/location/proximity.aspx?tid=32230">Religion</a></li> 
+				<li><a href="/net/location/proximity.aspx?tid=38000">Schools</a></li>
+				<li><a href="/net/org/info.aspx?s=8795">Security Patrol</a></li>
+			</ul>
+		</div> 
+		
+		<div class="sm_column"> 
+			<h3><a href="/net/location/proximity.aspx?tid=31040">Events</a></h3> 
+			<ul class="menuUL"> 
+				<li><a href="/net/location/proximity.aspx?tid=22224">Arts &amp; Culture</a></li>
+				<li><a href="/net/location/proximity.aspx?tid=22222">Festivals &amp; Tours</a></li>
+				<li><a href="/net/location/proximity.aspx?tid=22225">Sports &amp; Recreation</a></li>
+			</ul>
+			
+			<h3><a href="/net/location/proximity.aspx?tid=32100">Health</a></h3> 
+			<ul class="menuUL">
+			    <li><a href="/net/location/proximity.aspx?tid=32170">Doctors &amp; Clinics</a></li>
+				<li><a href="/net/location/proximity.aspx?tid=32130">Exercise &amp; Yoga</a></li>
+				<li><a href="/net/location/proximity.aspx?tid=32150">Massage &amp; Chiropractic</a></li>
+			    <li><a href="/net/location/proximity.aspx?tid=32100">Salons &amp; Barbers</a></li>
+			</ul> 
+		</div>
+		
+		<div class="sm_column"> 
+			<h3><a href="">Home &amp; Garden</a></h3> 
+			<ul class="menuUL"> 
+				<li><a href="/net/location/proximity.aspx?tid=31215">Appraisals</a></li> 
+				<li><a href="/net/location/proximity.aspx?tid=31220">Architecture</a></li>
+				<li><a href="/net/location/proximity.aspx?tid=31230">Contractors</a></li>
+				<li><a href="/net/location/proximity.aspx?tid=31245">Inspectors</a></li>
+				<li><a href="/net/location/proximity.aspx?tid=31258">Interior Design</a></li>
+				<li><a href="/net/location/proximity.aspx?tid=31265">Landscaping</a></li>  
+				<li><a href="/net/location/proximity.aspx?tid=31252">Painting</a></li>
+				<li><a href="/net/location/proximity.aspx?tid=31270">Real Estate</a></li> 
+				<li><a href="/net/location/proximity.aspx?tid=31290">Repairs</a></li> 
+				<li><a href="/net/location/proximity.aspx?tid=31492">Stained Glass</a></li> 
+			</ul>
+		</div> 
+		
+		<div class="sm_column">				
+			<h3><a href="/net/location/proximity.aspx?tid=31040">Services</a></h3> 
+			<ul class="menuUL"> 
+				<li><a href="/net/location/proximity.aspx?tid=31045">Accounting</a></li>
+				<li><a href="/net/location/proximity.aspx?tid=31065">Attorneys</a></li>
+				<li><a href="/net/location/proximity.aspx?tid=31072">Automotive</a></li>
+				<!--
+				<li><a href="">Banking</a></li>
+				-->
+				<li><a href="/net/location/proximity.aspx?tid=31100">Computers</a></li>
+				<li><a href="/net/location/proximity.aspx?tid=31130">Financial</a></li>
+				<li><a href="/net/location/proximity.aspx?tid=31135">Insurance</a></li>
+				<li><a href="/net/location/proximity.aspx?tid=31150">Printing</a></li>
+				<li><a href="/net/location/proximity.aspx?tid=31180">Travel</a><br><br></li>
+				<li><a href="/directory/search">Search Entire Directory</a></li>
+			</ul>
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>
+<!-- END DIRECTORY MENU -->

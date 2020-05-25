@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Plyr - More</title>
+  <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+  <link rel="stylesheet" href="../../localsite/css/swiper.min.css">
+
+  <script src="../../localsite/js/zepto.min.js"></script>
+
+  <!--
+    To do: See "Multiple players" on https://github.com/sampotts/plyr
+  -->
+  <style>
+    html, body {
+      position: relative;
+      height: 100%;
+    }
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+    .textMargin {
+      margin:20px 20px 30px 30px;
+    }
+
+    .swiper-container {
+      width: 100%;
+      height: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .swiper-slide {
+      text-align: center;
+      background: #fff;
+      /*
+      
+      font-size: 18px;
+      
+      */
+      /* Center slide text vertically, and horizontally */
+      
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+      
+      overflow: hidden;
+      position: relative;
+    }
+    .swiper-slide img {
+
+    }
+    :focus {
+        outline-width: 0px;
+    }
+
+    /* Additions */
+    .swiper-slide .title {
+      font-size: 41px;
+      font-weight: 300;
+    }
+    .swiper-slide .subtitle {
+      font-size: 21px;
+    }
+    .swiper-slide .text {
+      font-size: 14px;
+      max-width: 400px;
+      line-height: 1.3;
+    }
+
+    /* Overrides */
+    .swiper-container-vertical>.swiper-pagination-bullets {
+        /* Removes centering alignment which is skewed by quantity */
+        -webkit-transform: translate3d(0,-0%,0);
+        transform: translate3d(0,-0%,0);
+    }
+    .swiper-pagination-bullet {
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        border-radius: 100%;
+        background: #ccc;
+        opacity: .8;
+        /* margin: 10px 0 !important; */
+        margin: 12px 10px !important;
+    }
+    
+    .swiper-pagination-bullet-active {
+        opacity: 1;
+        background: #fefefe;
+        /* box-shadow: 0px 0px 2px rgba(0,0,0,0.2); */
+        background: #fff;
+        border: 2px solid #eee;
+        width: 8px;
+        height: 8px;
+        box-shadow: 0px 0px 1px rgba(256,250,250,0.5);
+    }
+    @media (max-width: 799px) {
+      .swiper-pagination-bullet {
+        width: 18px;
+        height: 18px;
+      }
+      .swiper-pagination-bullet-active {
+        width: 14px;
+        height: 14px;
+      }
+    }
+
+    .swiper-button-prev {
+        background-image: url(../img/plyr/arrow-prev.png) !important;
+        left: -18px;
+    }
+    .swiper-button-prev:hover {
+        background-image: url(../img/plyr/arrow-prev-hover-blue.png) !important;
+    }
+    .swiper-button-next {
+        background-image: url(../img/plyr/arrow-next.png) !important;
+        right: -18px;
+    }
+    .swiper-button-next:hover {
+        background-image: url(../img/plyr/arrow-next-hover-blue.png) !important;
+    }
+    .swiper-button-next, .swiper-button-prev {
+        background-size: 57px 57px;
+        width: 100px;
+        height: 100px; 
+    }
+    .swiper-container-vertical>.swiper-pagination-bullets {
+      right:auto;
+      left:12px;
+      top:50px;
+    }
+    .box {
+      text-align: left;
+      position: absolute;
+      left: 80px;
+      top: 90px;
+      background-color: rgba(250,250,256,.85);
+      padding: 30px 20px 20px 30px;
+      overflow: scroll;
+      border: 8px solid #777;
+      max-height: 74%;
+    }
+    .box-right {
+      left:auto;
+      right:50px;
+    }
+  </style>
+
+  <!-- https://github.com/sampotts/plyr -->
+  <style>
+    .container {
+      margin: 0px auto;
+      width:100%;
+      height:100%;
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel='stylesheet' href='https://unpkg.com/plyr@3/dist/plyr.css'>
+
+  <!-- Plyr resources and browser polyfills are specified in the pen settings -->
+  <script src='https://cdn.polyfill.io/v2/polyfill.min.js?features=es6,Array.prototype.includes,CustomEvent,Object.entries,Object.values,URL'></script>
+  <script src='https://unpkg.com/plyr@3'></script>
+
+
+
+</head>
+<body>
+<div id="header" style="display:none"></div>
+  <!-- Swiper -->
+  <!--
+    Notes:
+    Set the height:100% on div within swiper-slide
+    text-align:left; overflow:scroll; 
+  -->
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+
+      <!-- Reactivate -->
+      <div class="swiper-slide" data-hash="blender-camera-tracking">
+        <div class="container">
+          <div id="player8" data-plyr-provider="youtube" data-plyr-embed-id="kzym73lhmD4"></div>
+        </div>
+        <script>
+            player = new Plyr('#player8', {autopause:'true'});
+            window.player = player;
+        </script>
+      </div>
+      
+
+      <!--
+      <div class="swiper-slide" data-hash="pretty-sweet">
+
+        <div class="container">
+          <div id="player2" data-plyr-provider="vimeo" data-plyr-embed-id="161071550" allow="autoplay; fullscreen"></div>
+        </div>
+        <script>
+            player = new Plyr('#player2', {autopause:'true',color:'adef00'});
+            window.player = player;
+        </script>
+
+      </div>
+      -->
+      
+      <!-- Reactivate 
+      <div class="swiper-slide" data-hash="mindcraft-ar">
+        <div class="container">
+          <div id="player9" data-plyr-provider="youtube" data-plyr-embed-id="kYVtu6QPZnY"></div>
+        </div>
+        <script>
+            player = new Plyr('#player9', {autopause:'true',starttime:120});
+            window.player = player;
+        </script>
+      </div>
+      -->
+      
+      <div class="swiper-slide" data-hash="georgia"><img data-src="../../state/img/hero/ian-baldwin-27931-unsplash.jpg" class="swiper-lazy" style="width:100%;opacity:0.65"></div>
+
+      <div class="swiper-slide" data-hash="intro">
+        <img class="swiper-lazy" data-src="http://lorempixel.com/1600/1200/nature/1/">
+        <div class="swiper-lazy-preloader"></div>
+
+      </div>
+      
+
+      <div class="swiper-slide" data-hash="maya">
+
+          <div classX="text" style="height:100%; text-align:left; overflow:auto;">
+            <div style="overflow: scroll">
+              <img data-src="../house/img/panorama1.webp" class="swiper-lazy">
+            </div>
+            <p class="textMargin">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla laoreet justo vitae porttitor porttitor. Suspendisse in sem justo. Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod. Aliquam hendrerit lorem at elit facilisis rutrum. Ut at ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec, tincidunt ut libero. Aenean feugiat non eros quis feugiat.</p>
+          </div>
+
+          <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+
+      </div>
+
+      
+
+      <!--
+        From Reel Scout iFrame
+        id="gallery_frame" style="visibility: visible; height: 1481px;" name="gallery_frame" srcX="loc_results_content.aspx" scrolling="no" frameborder="0" marginwidth="0" marginheight="0" width="100%" height="800" vspace="0" hspace="0" allowtransparency="true" onload="size_frame(this);"
+      -->
+      <!--
+      <div class="swiper-slide" data-hash="film">
+        <iframe width="100%" height="100%" id="gallery_frame" class="swiper-lazy" data-src="https://ga.reel-scout.com/loc_results_content.aspx" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen" style="visibility:visible; margin-left:65px" scrolling="yes" allowfullscreen></iframe>
+        <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+      </div>
+      -->
+
+      
+
+      <div class="swiper-slide" data-hash="livingroom">
+        <img class="swiper-lazy" data-src="../blend/img/livingroom-windows.jpg">
+        <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+      </div>
+
+
+      <!--
+        One breath
+        https://vimeo.com/335874600
+      -->
+
+      <div class="swiper-slide" data-hash="vimeo">
+
+        <div class="container">
+          <!--
+          Include the following when enabling autoplay in player line below.
+          allow="autoplay; fullscreen"
+          -->
+          <div id="player3" data-plyr-provider="vimeo" data-plyr-embed-id="120108729" allow="autoplay; fullscreen"></div>
+        </div>
+        <script>
+            // Change "{}" to your options:
+            // https://github.com/sampotts/plyr/#options
+            // https://player.vimeo.com/video/120108729?autoplay=0&background=0&mute=0&controls=1
+
+            // autopause:'true',autoplay:'false'
+            // autopause not working (might only apply to others by same host)
+            // color not working
+            player = new Plyr('#player3', {autopause:'true',color:'adef00'});
+            window.player = player;
+        </script>
+
+      </div>
+
+
+
+      <!-- Sample of lazy loading by using an iFrame -->
+      <!--
+      <div class="swiper-slide" data-hash="georgia-ice">
+          <iframe width="100%" height="100%" class="swiper-lazy" data-src="https://player.vimeo.com/video/120108729?autoplay=0&background=0&mute=0&controls=1" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+          <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+      </div>
+      -->
+      <!-- Set autoplay=1 to autoplay above -->
+
+      <div class="swiper-slide bluemoon1" data-hash="bluemoon1">
+        <div class="plyr__video-embed" id="player">
+          <iframe
+              src="https://www.youtube.com/embed/bTqVqk7FSmY?start=100&origin=https://plyr.io&iv_load_policy=3&modestbranding=1&playsinline=1&showinfo=0&rel=0&enablejsapi=1"
+              allowfullscreen
+              allowtransparency
+              allow="autoplay"
+          ></iframe>
+        </div>
+        <style>
+          .bluemoon1 > .plyr {
+            min-width: 100% /* hack, not sure why this is not needed in video.html */
+          }
+        </style>
+        <script>
+          const playerA = new Plyr('#player');
+        </script>
+      </div>
+
+      <div class="swiper-slide" data-hash="bluemoon">
+        <!--
+        <iframe class="swiper-lazy" width="100%" height="100%" data-src="https://www.youtube.com/embed/DAZrVpIoW_0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe>
+        -->
+        <div class="container">
+          <div id="player4" data-plyr-provider="youtube" data-plyr-embed-id="bTqVqk7FSmY"></div>
+        </div>
+        <script>
+            // Change "{}" to your options:
+            // https://github.com/sampotts/plyr/#options
+            player = new Plyr('#player4', {autopause:'true',hideControls:'true'});
+            window.player = player;
+        </script>
+      </div>
+
+      <div class="swiper-slide" data-hash="bluemoonfull">
+        <div class="container">
+          <div id="player7" data-plyr-provider="vimeo" data-plyr-embed-id="154493707" allow="autoplay; fullscreen"></div>
+        </div>
+        <script>
+            player = new Plyr('#player7', {autopause:'true',color:'adef00'});
+            window.player = player;
+        </script>
+
+      </div>
+
+    </div>
+
+
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+
+    <!-- Navigation -->
+    <!--
+    <div class="swiper-button-next swiper-button-white"></div>
+    <div class="swiper-button-prev swiper-button-white"></div>
+    -->
+
+    <div class="swiper-button-next swiper-button-white" style="bottom:15px !important"></div>
+
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="../../localsite/js/swiper.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      /* mousewheel: true, */ /* In addition to hold and swipe. Jumps to quick and bypasses elements below images. */
+      /* Issue: the last slide is also preloaded. */
+      slidesPerView: 'auto',
+      lazy: {
+        loadPrevNext: true,
+      },
+      /* preloadImages: false, No difference */
+      loop: true,
+      /* effect: 'fade', */
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      hashNavigation: {
+        watchState: true,
+      },
+      keyboard: {
+        enabled: true,
+        onlyInViewport: false
+      },
+
+      direction: 'vertical',
+      /*
+      freeMode: true,
+      scrollbar: {
+        el: '.swiper-scrollbar',
+      },
+      */
+    });
+
+    // Fast forward: https://codepen.io/sampotts/pen/jARJYp
+    //player.play();
+  </script>
+</body>
+</html>

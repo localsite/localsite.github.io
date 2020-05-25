@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Local Tweets</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Look who's Tweeting in your neighborhood">
+    <meta content="width=device-width; initial-scale=1.0; maximum-scale=1.0;" name="viewport" />
+    <meta content="YES" name="apple-touch-fullscreen" />
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+	<script type="application/javascript">window.jQuery || document.write(unescape('%3Cscript src="../../localsite/js/jquery.min.js"%3E%3C/script%3E'))</script>
+
+	<style type="text/css">
+	div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6 {
+		margin: 0pt;
+		padding: 0pt;
+	}
+	body {
+		font-family:'Lucida Grande',sans-serif;
+	}
+	img {
+		border: 0;
+	}
+	#container {
+
+	}
+	#tweetList {
+		color: #333;
+	}
+	#tweetList .tweet {
+		padding: 8px;
+		background: #ccc;
+		-moz-border-radius: 8px;
+		-webkit-border-radius: 8px;
+		margin-bottom: .5em;
+	}
+
+	#tweetList a {
+		color: #f30;
+		text-decoration: underline;
+	}
+	#tweetList .avatar {
+		float: left;
+	}
+	#tweetList .content {
+		padding-left: 55px;
+	}
+	#tweetList .extra {
+		color: #666;
+		font-size: 85%
+	}
+
+	#placeList {
+		color: #333;
+	}
+	#placeList .tweet {
+		padding: 8px;
+		background: #ccc;
+		-moz-border-radius: 8px;
+		-webkit-border-radius: 8px;
+		margin-bottom: .5em;
+	}
+
+	#placeList a {
+		color: #f30;
+		text-decoration: underline;
+	}
+	#placeList .avatar {
+		float: left;
+	}
+	#placeList .content {
+		padding-left: 55px;
+	}
+	#placeList .extra {
+		color: #666;
+		font-size: 85%
+	}
+	</style>
+
+	<script type="text/javascript">
+        $(document).ready(function () {
+            $('#topMenuDiv').load('../../jquery/bootstrap/menu-layout.html', function(){
+                //alert("okay");
+            });
+        });
+    </script>
+</head>
+
+<body>
+<div id="header" style="display:none"></div>
+<div id="topMenuDiv"></div>
+
+<!--
+	Tests - Doesn't show users without pics.  
+	Limited to 150 requests per hour.
+	http://neighborhood.org/go/neighborhood/geoloc/twitter.htm
+-->
+
+<div id="container">
+
+	<p>Who&#39;s tweeting within a 1 mile radius of you...<br>
+	(The time displayed is GMT. &nbsp;Subtract 5 hours for Eastern Standard Time.)</p>
+	
+    <div id="placeList" class='tweet' style='float:right; width:350px;margin-left:15px;margin-right:15px'>&nbsp;</div>
+
+    <div id="tweetList" style='overflow:hidden'>&nbsp;</div>
+</div>
+
+<script type="text/javascript" src="feed.js"></script>
+<script type="text/javascript" src="geosearch.js"></script>
+
+</body></html>
