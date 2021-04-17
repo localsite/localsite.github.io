@@ -19,7 +19,7 @@ end if
 if InStr(serverName,"points.") > 0 then
 	'pageURL = "api/"
 	'Response.Redirect(pageURL)
-	Response.Redirect("https://dreamstudio.com/live/domains/")
+	Response.Redirect("https://dreamstudio.com/domains/")
 elseif InStr(serverName,"catchsail") > 0 then
 	Response.Redirect("audioscape/")
 elseif InStr(serverName,"recyclingisland") > 0 then
@@ -30,11 +30,11 @@ elseif InStr(serverName,"planet.live") > 0 then ' SpaceX Tesla
 elseif InStr(serverName,"model.earth") > 0 then
 	server.transfer("storms/earth/index.html")
 elseif InStr(serverName,"acquire.media") > 0 then
-	frameURL = "https://dreamstudio.com/live/domains/"
+	frameURL = "https://dreamstudio.com/domains/"
 elseif InStr(serverName,"dailyspoon") > 0 then
-	frameURL = "https://dreamstudio.com/live/domains/"
+	frameURL = "https://dreamstudio.com/domains/"
 elseif frameURL = "" then
-	Response.Redirect("https://dreamstudio.com/live/domains/")
+	Response.Redirect("https://dreamstudio.com/domains/")
 end if
 
 %><html><head>

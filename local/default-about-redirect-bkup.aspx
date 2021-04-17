@@ -311,7 +311,7 @@ elseif InStr(serverName,"dreamstudio") > 0 or InStr(serverName,"dreammakerstudio
 	server.transfer(pageURL,true)
 elseif frameURL = "" then
 
-	'Response.Redirect("http://dreamstudio.com/live/domains/")
+	'Response.Redirect("http://dreamstudio.com/domains/")
 	server.transfer("storms/earth/index.html")
 	'pageURL = "/local/index.html"
 	'server.transfer(pageURL)

@@ -1,0 +1,125 @@
+<head>
+<title>What Should I Do Today?</title>
+
+<script type="application/javascript">window.jQuery || document.write("<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'>\x3C/script>")</script>
+
+<script type="text/javascript">
+var action = ["Take","Walk","Drive","Ride","Fly"];
+var noun = ["grocery bag","blanket","car","friends and family","birthday party guests"];
+var nounLocation = ["the Farmers Market", "a grassy field", "our house", "a gift store", "the garage","Target","Six Flags","the pool", "a marathon race", "the potty", "the moon", "the beach", "a disco", "Mars"];
+var verb = ["get", "request", "pick up", "eat", "poop", "burb", "fart", "recycle", "burn", "bury", "kiss"];
+var nounThing = ["food", "flowers", "gas", "spaghetti","poop","swords","corn on the cob","squishy bugs", "jellybeans", "ear wax"];
+var where = ["with poop", "with asparagus","on a dragon's back","on a horse","for your birthday","with an old fart", "on the dance floor", "at the bowling alley", "in the backyard", "on Jupitor"];
+
+function displayMadLib() {
+	var phrase = "<b>Today:</b> " + getRandom(action) + " your " + getRandom(noun) + " to " + getRandom(nounLocation) + ", then ";
+	phrase += getRandom(verb) + " some " + getRandom(nounThing) + " " + getRandom(where) + ".";
+	$('#results').html(phrase);
+
+	phrase = "<b>Tomorrow:</b> " + getRandom(action) + " our " + getRandom(noun) + " to " + getRandom(nounLocation) + " and ";
+	phrase += getRandom(verb) + " some " + getRandom(nounThing) + " " + getRandom(where) + "!";
+	$('#instructions').hide();
+	$('#results2').html(phrase);
+	$('#disclaimer').html("Unhappy with your advice? &nbsp;<a href='javascript:displayMadLib();'>Try Again</a>");
+}
+function getRandom(array)
+{
+	var random = Math.round((Math.random()*(array.length-1)));
+	return array[random];
+}
+</script>
+
+<style type='text/css'>
+.textbutton {
+	background-color: #3333f5;
+	color: #fff;
+	border:1px solid #dedede;
+    text-decoration:none; 
+    padding:18px;
+	padding-top:10px;
+	padding-left:17px;
+	padding-right:17px;
+	padding-bottom:8px;
+	font-size: 24px;
+	floatXX:left;
+	margin-right:10px;
+	margin-right:4px;
+	margin-bottom:2px;
+
+	margin-top:20px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	font-family1:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+	white-space: nowrap;
+}
+.textbutton:hover {
+	border: solid 1px #555;
+	color: #fff;
+	background-color: #777;
+	text-decoration: none;
+	cursor: pointer;
+}
+.holder {
+	background-color: #ccc;
+	padding:40px;
+	width:400px;
+	margin: 0px auto;
+	margin-top:50px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
+</style>
+
+</head>
+
+<body style="text-align:center;">
+
+<div class="holder">
+<h1>Your Daily Planner</h1>
+
+<div style="font-size:20px">
+Developed by a father and his 8 year old son.</div><br><br>
+
+<br><a href="javascript:displayMadLib();" class="textbutton">What should I do today and tomorrow?</a><br><br><br>
+
+<div id="instructions" style="font-size:20px"><br><br><br><br>Click the button above to plan your activities for today and tomorrow.</div>
+
+<div id="results" style="font-size:20pt"><br></div><br>
+<div id="results2" style="font-size:20pt"></div>
+</div><br>
+<div id="disclaimer" style="font-size:14pt;"></div>
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<div style='font-size:12pt'>
+<pre style='font-size:32pt'>
+Ethan's Website</pre><pre>
+Welcome, here's some of my favorite images and things.
+
+<a href='http://psdfan.com/inspiration/graphic-design/30-superb-lego-sculptures/'>
+<img src='legos/goldman.jpg' /></a>
+
+</pre>
+
+</div>
+-->
