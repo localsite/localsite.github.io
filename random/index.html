@@ -1,22 +1,29 @@
 <head>
 <title>What Should I Do Today?</title>
 
-<script type="application/javascript">window.jQuery || document.write("<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'>\x3C/script>")</script>
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script>
 
 <script type="text/javascript">
+// Add your own custom values to the arrays below!
+
 var action = ["Take","Walk","Drive","Ride","Fly"];
+
 var noun = ["grocery bag","blanket","car","friends and family","birthday party guests"];
+
 var nounLocation = ["the Farmers Market", "a grassy field", "our house", "a gift store", "the garage","Target","Six Flags","the pool", "a marathon race", "the potty", "the moon", "the beach", "a disco", "Mars"];
+
 var verb = ["get", "request", "pick up", "eat", "poop", "burb", "fart", "recycle", "burn", "bury", "kiss"];
+
 var nounThing = ["food", "flowers", "gas", "spaghetti","poop","swords","corn on the cob","squishy bugs", "jellybeans", "ear wax"];
+
 var where = ["with poop", "with asparagus","on a dragon's back","on a horse","for your birthday","with an old fart", "on the dance floor", "at the bowling alley", "in the backyard", "on Jupitor"];
 
 function displayMadLib() {
-	var phrase = "<b>Today:</b> " + getRandom(action) + " your " + getRandom(noun) + " to " + getRandom(nounLocation) + ", then ";
+	var phrase = "<b>Today:</b>" + getRandom(action) + " your " + getRandom(noun) + " to " + getRandom(nounLocation) + ", then ";
 	phrase += getRandom(verb) + " some " + getRandom(nounThing) + " " + getRandom(where) + ".";
 	$('#results').html(phrase);
 
-	phrase = "<b>Tomorrow:</b> " + getRandom(action) + " our " + getRandom(noun) + " to " + getRandom(nounLocation) + " and ";
+	phrase = "<b>Tomorrow:</b>" + getRandom(action) + " our " + getRandom(noun) + " to " + getRandom(nounLocation) + " and ";
 	phrase += getRandom(verb) + " some " + getRandom(nounThing) + " " + getRandom(where) + "!";
 	$('#instructions').hide();
 	$('#results2').html(phrase);
@@ -30,6 +37,9 @@ function getRandom(array)
 </script>
 
 <style type='text/css'>
+body {
+	font-family: helvetica;
+}
 .textbutton {
 	background-color: #3333f5;
 	color: #fff;
@@ -40,17 +50,12 @@ function getRandom(array)
 	padding-left:17px;
 	padding-right:17px;
 	padding-bottom:8px;
-	font-size: 24px;
-	floatXX:left;
+	font-size: 22px;
 	margin-right:10px;
 	margin-right:4px;
 	margin-bottom:2px;
-
 	margin-top:20px;
-	-moz-border-radius: 10px;
-	-webkit-border-radius: 10px;
 	border-radius: 10px;
-	font-family1:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
 	white-space: nowrap;
 }
 .textbutton:hover {
@@ -63,12 +68,15 @@ function getRandom(array)
 .holder {
 	background-color: #ccc;
 	padding:40px;
-	width:400px;
+	width:415px;
 	margin: 0px auto;
 	margin-top:50px;
-	-moz-border-radius: 10px;
-	-webkit-border-radius: 10px;
 	border-radius: 10px;
+}
+.holder b {
+	display: block;
+	margin-bottom:15px;
+	font-size: 18px;
 }
 </style>
 
@@ -77,49 +85,20 @@ function getRandom(array)
 <body style="text-align:center;">
 
 <div class="holder">
-<h1>Your Daily Planner</h1>
 
-<div style="font-size:20px">
-Developed by a father and his 8 year old son.</div><br><br>
+	<h1>Your Daily Planner</h1>
+	<br>
 
-<br><a href="javascript:displayMadLib();" class="textbutton">What should I do today and tomorrow?</a><br><br><br>
+	<br><a href="javascript:displayMadLib();" class="textbutton">What should I do today and tomorrow?</a><br><br><br>
 
-<div id="instructions" style="font-size:20px"><br><br><br><br>Click the button above to plan your activities for today and tomorrow.</div>
+	<div id="instructions" style="font-size:20px"><br><br><br><br>Click the button above to plan your activities.</div>
 
-<div id="results" style="font-size:20pt"><br></div><br>
-<div id="results2" style="font-size:20pt"></div>
-</div><br>
+	<div id="results" style="font-size:16pt; text-align:left;"></div><br>
+	<div id="results2" style="font-size:16pt; text-align:left;"></div>
+
+</div>
+<br>
+
 <div id="disclaimer" style="font-size:14pt;"></div>
 
 </body>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--
-<div style='font-size:12pt'>
-<pre style='font-size:32pt'>
-Ethan's Website</pre><pre>
-Welcome, here's some of my favorite images and things.
-
-<a href='http://psdfan.com/inspiration/graphic-design/30-superb-lego-sculptures/'>
-<img src='legos/goldman.jpg' /></a>
-
-</pre>
-
-</div>
--->
